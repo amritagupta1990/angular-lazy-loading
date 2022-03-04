@@ -7,6 +7,8 @@ import { CustomerModule } from './components/customers/customer.module';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { OrderModule } from './components/orders/order.module';
+import { HttpClientModule } from '@angular/common/http'
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { OrderModule } from './components/orders/order.module';
     BrowserModule,
     AppRoutingModule,
     CustomerModule,
-    OrderModule
+    OrderModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

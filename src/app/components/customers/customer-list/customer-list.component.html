@@ -1,1 +1,40 @@
-<p>customer-list works!</p>
+<div class="container">
+<table class="table">
+    <thead>
+        <th>
+            Name
+        </th>
+        <th>
+            city
+        </th>
+        <th>
+            Email Id
+        </th>
+        <th>
+            Phone Number
+        </th>
+        <th>
+           Details
+        </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customer_list">
+            <td>
+                {{customer.name}}
+            </td>
+            <td>
+                {{customer.city}}
+            </td>
+            <td>
+                {{customer.email_id}}
+            </td>
+            <td>
+                {{customer.phone_no}}
+            </td>
+            <td>
+                <button class="btn btn-sm btn-primary">Show Details</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
